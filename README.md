@@ -9,49 +9,47 @@
    git clone https://github.com/Constellation-Labs/euclid-development-environment.git
    ```
 
-2. Clone the current repository inside the `euclid-development-environment/source/project` folder.
-
-3. Navigate to the root folder `euclid-sdk`:
+2. Navigate to the root folder `euclid-sdk`:
    ```bash
    cd euclid-development-environment
    ```
-
-4. Modify following keys in the `euclid.json` file with your configuration:
-   ```json
-   {
-     "github_token": "YOUR_GITHUB_TOKEN",
-     "tessellation_version": "2.8.1",
-      ...
-     "project_name": "datamart-metagraph"
-   }
-   ```
-
-5. Review the following page before running the next commands:  
+   
+3. Review the following page before running the next commands:  
    [Hydra CLI Documentation](https://docs.constellationnetwork.io/sdk/elements/hydra-cli)
 
-6. Run the build script:
+4. Run the template installation:
+   ```bash
+   ./scripts/hydra install-template --repo https://github.com/ssd39/DataMart.git --path ./ datamart-metagraph
+   ```
+
+5. Run the build script:
    ```bash
    ./scripts/hydra build
    ```
 
-7. Start the genesis network:
+6. Start the genesis network:
    ```bash
    ./scripts/hydra start-genesis
    ```
 
 ### To Start Frontend
 
-1. Navigate to the `ui` folder:
+1. Clone the DataMart repo:
    ```bash
-   cd euclid-development-environment/source/project/ui
+   git clone https://github.com/ssd39/DataMart.git
    ```
 
-2. Install the required packages:
+2. Navigate to the `ui` folder:
+   ```bash
+   cd DataMart/ui
+   ```
+
+3. Install the required packages:
    ```bash
    npm install
    ```
 
-3. Start the frontend:
+4. Start the frontend:
    ```bash
    npm run start
    ```

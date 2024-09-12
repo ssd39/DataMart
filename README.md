@@ -1,5 +1,64 @@
 ### Project Description: DataMart - Solving the Data Liquidity Problem
 
+## Setup Instructions
+
+### To Start Metagraph
+
+1. Clone the Euclid development environment:
+   ```bash
+   git clone https://github.com/Constellation-Labs/euclid-development-environment.git
+   ```
+
+2. Clone the current repository inside the `euclid-development-environment/source/project` folder.
+
+3. Navigate to the root folder `euclid-sdk`:
+   ```bash
+   cd euclid-development-environment
+   ```
+
+4. Modify following keys in the `euclid.json` file with your configuration:
+   ```json
+   {
+     "github_token": "YOUR_GITHUB_TOKEN",
+     "tessellation_version": "2.8.1",
+      ...
+     "project_name": "datamart-metagraph"
+   }
+   ```
+
+5. Review the following page before running the next commands:  
+   [Hydra CLI Documentation](https://docs.constellationnetwork.io/sdk/elements/hydra-cli)
+
+6. Run the build script:
+   ```bash
+   ./scripts/hydra build
+   ```
+
+7. Start the genesis network:
+   ```bash
+   ./scripts/hydra start-genesis
+   ```
+
+### To Start Frontend
+
+1. Navigate to the `ui` folder:
+   ```bash
+   cd euclid-development-environment/source/project/ui
+   ```
+
+2. Install the required packages:
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend:
+   ```bash
+   npm run start
+   ```
+
+
+## Details
+
 **DataMart** is an innovative solution designed to address the complex issues surrounding data liquidity. It leverages **metagraph technology**, a type of blockchain that enables the creation of application-specific blockchains, to facilitate secure, user-controlled, and privacy-centric data sharing between organizations. 
 
 #### Functionality:
